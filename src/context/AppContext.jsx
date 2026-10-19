@@ -4,10 +4,12 @@ import { soundEngine } from '../utils/audio';
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
-  // Read initial values from URL query parameters (?to=Name&from=Name) or localStorage
+  // Read initial values from URL query parameters (?to=Name&from=Name), localStorage, or default to Prity & Sayanka
   const urlParams = new URLSearchParams(window.location.search);
-  const initialHerName = urlParams.get('to') || localStorage.getItem('kdrama_her_name') || 'Birthday Girl 🌸';
-  const initialMyName = urlParams.get('from') || localStorage.getItem('kdrama_my_name') || 'Your Secret Admirer';
+  const storedHer = localStorage.getItem('kdrama_her_name');
+  const initialHerName = urlParams.get('to') || (storedHer && storedHer !== 'Birthday Girl 🌸' ? storedHer : 'Prity');
+  const storedMe = localStorage.getItem('kdrama_my_name');
+  const initialMyName = urlParams.get('from') || (storedMe && storedMe !== 'Your Secret Admirer' ? storedMe : 'Sayanka');
 
   const [herName, setHerName] = useState(initialHerName);
   const [myName, setMyName] = useState(initialMyName);

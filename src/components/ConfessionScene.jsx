@@ -52,11 +52,15 @@ export default function ConfessionScene() {
   const handleSelectReaction = (option) => {
     setActiveReaction(option);
     setSelectedReaction(option.id);
-    if (option.id === 'custom') {
-      setCustomText(option.defaultMsg);
+    let msg = option.defaultMsg;
+    if (msg.startsWith('Hey!')) {
+      msg = msg.replace('Hey!', `Hey ${myName}!`);
+    } else if (msg.startsWith('Hey,')) {
+      msg = msg.replace('Hey,', `Hey ${myName},`);
     } else {
-      setCustomText(option.defaultMsg);
+      msg = `Hey ${myName}! ` + msg;
     }
+    setCustomText(msg);
     soundEngine.playFanfare();
     confetti({
       particleCount: 100,
