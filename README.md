@@ -11,7 +11,7 @@ A warm, interactive 3D birthday celebration and thoughtful confession letter web
   - **Horizontal Envelope Deck**: Envelopes can be swiped horizontally on mobile like a carousel card deck.
   - **Swipe to Blow Candles 🕯️**: Drag your thumb across the interactive golden slider track to blow out the 3D candles and trigger celebratory confetti!
 - **Make a Wish & Relight**: Interactive candle blow-out with sound effects and wish reveal banner.
-- **URL Personalization**: Easily customize the recipient and sender names via URL query parameters (e.g., `?to=Prity&from=Sayanka`) or using the built-in "Share / Edit" modal in the top bar.
+- **URL Personalization**: Easily customize the recipient and sender names via URL query parameters (e.g., `?to=Mriga&from=Sayanka`) or using the built-in "Share / Edit" modal in the top bar.
 
 ## 🚀 Running Locally
 

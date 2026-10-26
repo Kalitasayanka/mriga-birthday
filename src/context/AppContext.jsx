@@ -3,7 +3,7 @@ import { AppContext } from './context';
 
 export function AppProvider({ children }) {
   const urlParams = new URLSearchParams(window.location.search);
-  const initialName = urlParams.get('to') || 'Prity';
+  const initialName = urlParams.get('to') || 'Mriga';
   const initialFrom = urlParams.get('from') || 'Sayanka';
 
   const [herName, setHerName] = useState(initialName);
